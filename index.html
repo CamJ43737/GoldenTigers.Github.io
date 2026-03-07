@@ -1,21 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlantWear Dashboard</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crop Fitness Tracker — Demo</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet Draw CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+  <!-- PapaParse for CSV -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <!-- Turf -->
+  <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet Draw -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-<h1>PlantWear Dashboard</h1>
-</header>
+  <div id="app">
+    <header>
+      <h1>Crop Fitness Tracker — Demo (July 15, 2025)</h1>
+      <div id="citation">Source: Nguyen et al. (2025). ANR-3180, Alabama Cooperative Extension System.</div>
+    </header>
 
-<main id="plant-cards">
-<!-- Plant cards will appear here -->
-</main>
+    <main class="three-panel">
+      <!-- Left Panel: Vital Signs & AI Note -->
+      <section id="left-panel" class="panel">
+        <div class="gauge-card">
+          <div id="fitness-gauge" class="gauge">--</div>
+          <div id="stress-badge" class="badge">--</div>
+        </div>
 
-<script src="script.js"></script>
+        <div id="vitals" class="vitals">
+          <!-- vitals injected by JS -->
+        </div>
+
+        <div class="ai-card">
+          <h3>Attending Physician Note</h3>
+          <pre id="ai-note">Draw a field or select a crop to generate the note.</pre>
+          <button id="ai-refresh">Generate Note (stub)</button>
+        </div>
+      </section>
+
+      <!-- Center Panel: Map -->
+      <section id="center-panel" class="panel">
+        <div id="map" style="height:560px;"></div>
+        <div class="map-controls">
+          <label>Index layer:
+            <select id="index-switch">
+              <option value="NDVI">NDVI</option>
+              <option value="NDMI">NDMI</option>
+              <option value="EVI">EVI</option>
+              <option value="NDRE">NDRE</option>
+            </select>
+          </label>
+          <span id="sat-date">Satellite: 2025-07-27</span>
+          <button id="clear-draw">Clear Field</button>
+        </div>
+      </section>
+
+      <!-- Right Panel: Vital History charts -->
+      <section id="right-panel" class="panel">
+        <h3>Vital History (County / Field)</h3>
+        <canvas id="ndvi-chart" height="120"></canvas>
+        <canvas id="ndmi-chart" height="120"></canvas>
+        <canvas id="cwr-chart"  height="120"></canvas>
+
+        <div id="growth-timeline" class="timeline">
+          <h4>Crop Growth Timeline (hard-coded)</h4>
+          <div id="timeline-render"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Demo date: July 15, 2025 • Data read from data/processed/ and data/gee_exports/ (local)</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
