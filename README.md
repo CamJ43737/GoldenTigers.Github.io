@@ -1,7 +1,7 @@
-# PlantPulse VR - Visualizing Plant Stress in Agriculture
+# Crop Vitals - Field Health Monitoring System
 
  🌱 Overview
-PlantPulse VR is an interactive agricultural monitoring concept that helps farmers quickly identify plant stress using immersive visualization. 
+Crop Vitals is an interactive agricultural monitoring concept that helps farmers quickly identify plant stress using immersive visualization. 
 
 The system simulates plant‑health metrics such as:
 - Soil moisture
@@ -15,7 +15,7 @@ These inputs are processed and visualized as stress indicators inside a virtual 
 Farmers often struggle to detect plant stress early, especially in large crop fields. Stress caused by drought, poor soil nutrient availability, and environmental conditions is frequently discovered too late, reducing yield and crop quality. Traditional monitoring is slow, manual, and lacks real‑time insights.
 
  🌾 Solution
-PlantPulse VR visualizes plant data in an immersive virtual environment with:
+Crop Vitals visualizes plant data in an immersive virtual environment with:
 - 3D plant models
 - Color‑coded health indicators
 - Real-time stress simulation
