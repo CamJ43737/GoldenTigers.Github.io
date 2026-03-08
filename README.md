@@ -31,7 +31,7 @@ These signals are combined into a **Crop Fitness Score (0–100)** using agronom
 Crops covered include Cotton, Corn and Soybean
 
 
-## 🛠️ Technologies
+## 🛠️ Technical Approach
 
 | Layer | Tools |
 |---|---|
@@ -69,7 +69,6 @@ Final Score:  0–39 = 🔴 High Stress · 40–69 = 🟡 Moderate · 70–100 =
 ```
 
 
-
 ## 🗂️ Data Sources
 
 | Source | Variable | Coverage |
@@ -82,16 +81,42 @@ Final Score:  0–39 = 🔴 High Stress · 40–69 = 🟡 Moderate · 70–100 =
 
 
 
-## 🌍 Dashboard Features
+## 🌍 Results and Dashboard Features
 
 - **Date slider** — step through 7 Sentinel-2 acquisition dates to track seasonal progression
 - **Crop selector** — Cotton · Corn · Soybean with crop-specific stage calendars and Kc values
 - **Spatial dot layer** — ~900 sampled grid points colored by selected index (NDVI / NDMI / EVI / NDRE)
 - **Field polygon tool** — draw a boundary on the map to calculate field-specific fitness score via point-in-polygon
 - **ECG vital signs** — seven signal indicators with color-coded stress status
-- **AI field assessment** — CropWizard (UIUC) generates agronomic recommendations from Extension knowledge base
+- **AI field assessment** — CropWizard (UIUC) generates agronomic recommendations from the Extension knowledge base
 - **Download button** — export field assessment as `.txt` file
-- **Season Complete logic** — an out-of-season crop can automatically transition to the harvested state 
+- **Season Complete logic** — an out-of-season crop can automatically transition to the harvested state
+
+## ▶️ Run Instructions
+Prerequisites
+Python 3.x installed (for local server)
+A modern browser (Chrome or Edge recommended)
+Git installed
+
+Run Locally
+bash# 1. Clone the repository
+git clone https://github.com/CamJ43737/GoldenTigers.Github.io.git
+
+# 2. Navigate into the folder
+cd GoldenTigers.Github.io
+
+# 3. Start local server
+python -m http.server 8000
+
+# 4. Open in browser
+# Go to: http://localhost:8000
+View Live Demo
+The dashboard is deployed on GitHub Pages and requires no installation:
+👉 https://CamJ43737.github.io
+
+Notes:  Do not open index.html by double-clicking — the map data files will not load without a local server
+All data files are included in the repo under data/ — no external downloads needed
+Internet connection required for map tiles (OpenStreetMap) and font loading
 
 ## 🚀 Future Work
 
