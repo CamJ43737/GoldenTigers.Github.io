@@ -813,11 +813,18 @@ When soil moisture is below 0.14 m³/m³ or crop fitness score is below 40, alwa
   }
 }
 
-// ── DOWNLOAD BUTTON (from teammate) ──────────────────────────────
+// ── DOWNLOAD BUTTON ──────────────────────────────────────────────
 document.getElementById('download-btn')?.addEventListener('click', () => {
   const assessmentText = $('ai-note').textContent;
   if (!assessmentText) return;
-  const blob = new Blob([assessmentText], { type: 'text/plain' });
+
+  // Add your disclaimer
+  const disclaimer = "\n\nNote: This assessment uses AI to analyze and collect data. Always consult with a local agronomy expert for further advice.";
+
+  // Combine assessment text and disclaimer
+  const finalText = assessmentText + disclaimer;
+
+  const blob = new Blob([finalText], { type: 'text/plain' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = `field_assessment_${selectedCrop}_${selectedDate}.txt`;
