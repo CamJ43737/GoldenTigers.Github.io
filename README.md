@@ -11,8 +11,7 @@ Challenge 1: Integrated operational dashboard with decision-ready alerts
 Prompt: How can we integrate multiple data sources into a dashboard that prioritizes attention 
 and supports daily decisions?
 
-Farmers typically detect moisture stress **2–3 days after** visible wilting symptoms appear — by which point 15–25% of preventable yield loss has already occurred. Traditional county-level advisories lack the spatial precision needed for field-level decisions.
-
+Modern agricultural data exists in silos. Satellite imagery, weather forecasts, soil sensors, and crop models are each powerful on their own — but farmers and extension agents have no single place to see them together, interpret them jointly, and act on them confidently
 
 ## 🌱 Solution
 
