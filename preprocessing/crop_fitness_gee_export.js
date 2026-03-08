@@ -22,7 +22,7 @@
  */
 
 /* ── SETTINGS ─────────────────────────────────────────────── */
-var counties  = ee.FeatureCollection('projects/eeolakanmi-moisture/assets/counties_WGS84');
+/*var counties  = ee.FeatureCollection('edit this for shapefile');*/
 var maconAOI  = counties.filter(ee.Filter.eq('COUNTY', 'Macon'));
 var maconGeom = maconAOI.geometry();
 
