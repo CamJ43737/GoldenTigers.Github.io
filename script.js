@@ -819,7 +819,7 @@ document.getElementById('download-btn')?.addEventListener('click', () => {
   if (!assessmentText) return;
 
   // Add your disclaimer
-  const disclaimer = "\n\nNote: This assessment uses AI to analyze and collect data. Always consult with a local agronomy expert for further advice.";
+  const disclaimer = "\n\nNote: This assessment uses Crop Wizard AI to analyze and collect data. Always consult with a local agronomy expert for further advice.";
 
   // Combine assessment text and disclaimer
   const finalText = assessmentText + disclaimer;
