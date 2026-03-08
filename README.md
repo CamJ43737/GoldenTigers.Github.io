@@ -79,7 +79,15 @@ Final Score:  0–39 = 🔴 High Stress · 40–69 = 🟡 Moderate · 70–100 =
 | FAO-56 (calculated) | ET₀, CWR per crop | Daily derived |
 | USDA TIGER / GEE Asset | Macon County boundary | Static |
 
+## 🔧 Preprocessing Pipeline
 
+All raw data processing scripts are available in the [`preprocessing/`](./preprocessing) folder:
+
+| Script | Purpose |
+|---|---|
+| `crop_fitness_gee_export.js` | Google Earth Engine script — exports Sentinel-2 NDVI, NDMI, EVI, NDRE for Macon County across dates |
+| `nasa_power_pull.py` | Pulls daily weather data from NASA POWER API |
+| `crop_fitness_weather_processing.ipynb` | Calculates ET₀, CWR and merges all data into crop_fitness_master.csv |
 
 ## 🌍 Results and Dashboard Features
 
