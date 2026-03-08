@@ -125,10 +125,10 @@ Internet connection required for map tiles (OpenStreetMap) and font loading
 - Integration of additional SCAN stations for spatial soil moisture variability
 - SSURGO/SoilGrids automated soil parameter retrieval
 - Mobile-responsive layout for field use on tablets
-- Immersive VR interface
-  Using the Meta Quest. This feature would allow users to explore farm health data inside a 3D environment rather than through a traditional dashboard.
+- Immersive VR interface using the Meta Quest. 
 
-Possible capabilities include:
+
+This feature would allow users to explore farm health data inside a 3D environment rather than through a traditional dashboard. Possible capabilities include:
 	•	3D Farm Environment
 	•	Render a digital twin of the farm where users can walk through crop rows and visually inspect field conditions.
 	•	Interactive Crop Health Indicators
