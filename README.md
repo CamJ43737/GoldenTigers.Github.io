@@ -125,8 +125,22 @@ Internet connection required for map tiles (OpenStreetMap) and font loading
 - Integration of additional SCAN stations for spatial soil moisture variability
 - SSURGO/SoilGrids automated soil parameter retrieval
 - Mobile-responsive layout for field use on tablets
+- Immersive VR interface
+  Using the Meta Quest. This feature would allow users to explore farm health data inside a 3D environment rather than through a traditional dashboard.
 
+Possible capabilities include:
+	•	3D Farm Environment
+	•	Render a digital twin of the farm where users can walk through crop rows and visually inspect field conditions.
+	•	Interactive Crop Health Indicators
+	•	Highlight areas of concern directly in the environment, such as drought stress, disease risk, or nutrient deficiencies.
+	•	Drone and Sensor Data Visualization
+	•	Display crop health data collected from drones and sensors as overlays on the virtual farm landscape.
+	•	Spatial Data Analysis
+	•	Allow users to view field-level analytics in context by interacting with specific plants or regions to reveal soil moisture, temperature, and growth metrics.
+	•	Remote Farm Monitoring
+	•	Enable researchers and farmers to virtually inspect fields from anywhere using VR.
 
+This VR integration would expand the system from a traditional web dashboard into a digital twin agriculture platform, allowing users to analyze crop conditions in an immersive and spatially intuitive way.
 
 ## 📚 References
 
