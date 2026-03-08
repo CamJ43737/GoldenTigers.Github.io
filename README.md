@@ -98,7 +98,7 @@ All raw data processing scripts are available in the [`preprocessing/`](./prepro
 - **ECG vital signs** — seven signal indicators with color-coded stress status
 - **AI field assessment** — CropWizard (UIUC) generates agronomic recommendations from the Extension knowledge base
 - **Download button** — export field assessment as `.txt` file
-- **Season Complete logic** — an out-of-season crop can automatically transition to the harvested state
+- **Season Complete logic** — for example, an out-of-season crop can automatically transition to the harvested state
 
 ## ▶️ Run Instructions
 Prerequisites
