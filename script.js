@@ -760,3 +760,30 @@ async function refresh() {
   // so it never blocks the UI
   showTiffLayer('NDVI').catch(e => console.warn('GeoTIFF load failed:', e));
 })();
+
+// Button functionality for downloading the assessment
+document.getElementById('download-btn').addEventListener('click', () => {
+  const complete = isSeasonComplete(selectedCrop, selectedDate);
+  const masterRow = masterRowForDate(selectedDate);
+  let signals = null;
+
+  if (lastPolygon) {
+    signals = avgIndicesForPolygon(lastPolygon, selectedDate);
+  }
+
+  if (!signals) {
+    signals = countyMeanForDate(selectedDate);
+  }
+
+  const score = complete ? null : computeFitnessScore(signals);
+  const stress = stressFromScore(score);
+  
+  const assessmentText = buildNote(signals, masterRow, score, stress, complete);
+
+  const blob = new Blob([assessmentText], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'field_assessment.txt';
+  link.click();
+  URL.revokeObjectURL(link.href);
+});
