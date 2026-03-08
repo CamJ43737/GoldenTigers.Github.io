@@ -43,7 +43,7 @@ Crops covered include Cotton, Corn and Soybean
 | Mapping | Leaflet.js · Leaflet.draw · Turf.js |
 | Charts | Chart.js |
 | Data parsing | PapaParse |
-| AI assessment | CropWizard API (UIUC) — cropwizard-1.5 |
+| AI assessment | CropWizard API (UIUC) |
 | Version control | GitHub |
 
 
