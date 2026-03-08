@@ -99,17 +99,17 @@ A modern browser (Chrome or Edge recommended)
 Git installed
 
 Run Locally
-bash# 1. Clone the repository
+i. Clone the repository
 git clone https://github.com/CamJ43737/GoldenTigers.Github.io.git
 
-# 2. Navigate into the folder
+ii. Navigate into the folder
 cd GoldenTigers.Github.io
 
-# 3. Start local server
+iii. Start local server
 python -m http.server 8000
 
-# 4. Open in browser
-# Go to: http://localhost:8000
+iv . Open in browser
+ Go to: http://localhost:8000
 View Live Demo
 The dashboard is deployed on GitHub Pages and requires no installation:
 👉 https://CamJ43737.github.io
